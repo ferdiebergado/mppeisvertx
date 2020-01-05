@@ -1,0 +1,32 @@
+version: "2.1"
+
+services:
+  app:
+    image: mppeisvertx
+    build: .
+    ports:
+      - 8787:8787
+    depends_on:
+      - db
+    links:
+      - db
+    environment:
+      API_PORT: "8787"
+      PGPORT: "5432"
+      PGHOST: "db"
+      PGDATABASE: "mppeis"
+      PGUSER: "mppeis"
+      PGPASSWORD: "multigrade"
+  db:
+    image: mppeisvertxdb
+    build:
+      context: .
+      dockerfile: PostgresDockerfile
+    expose:
+      - 5432
+    restart: always
+    environment:
+      POSTGRES_USER: "mppeis"
+      POSTGRES_DB: "mppeis"
+      POSTGRES_PASSWORD: "multigrade"
+    shm_size: 256MB

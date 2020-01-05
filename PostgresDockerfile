@@ -1,0 +1,3 @@
+FROM postgres AS mppeisvertxdb
+
+ADD src/main/resources/database/init.pgsql /docker-entrypoint-initdb.d/init.sql
