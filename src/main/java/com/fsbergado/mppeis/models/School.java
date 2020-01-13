@@ -9,15 +9,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({"id", "name", "school_id", "year_established", "school_type", "school_location", "region_id", "division_id", "district_id"})
 public class School extends Model {
 
-    private int id;
+    private Integer id;
 
     private String name;
 
     @JsonProperty("school_id")
-    private int schoolId;
+    private Integer schoolId;
 
     @JsonProperty("year_established")
-    private int yearEstablished;
+    private Integer yearEstablished;
 
     @JsonProperty("school_type")
     private String schoolType;
@@ -26,23 +26,23 @@ public class School extends Model {
     private String schoolLocation;
 
     @JsonProperty("region_id")
-    private int regionId;
+    private Integer regionId;
 
     @JsonProperty("division_id")
-    private int divisionId;
+    private Integer divisionId;
 
     @JsonProperty("district_id")
-    private int districtId;
+    private Integer districtId;
 
     public School() {
         super();
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;        
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;        
     }
 
@@ -54,20 +54,20 @@ public class School extends Model {
         this.name = name;
     }
 
-    public int getSchoolId() {
+    public Integer getSchoolId() {
         return schoolId;
     }
 
-    public void setSchoolId(int id) {
+    public void setSchoolId(Integer id) {
         this.schoolId = id;
     }
 
-    public int getYearEstablished() {
+    public Integer getYearEstablished() {
         return yearEstablished;
     }
 
-    public void setYearEstablished(int year) {
-        this.yearEstablished = year;
+    public void setYearEstablished(Integer year_established) {
+        this.yearEstablished = year_established;
     }
 
     public String getSchoolType() {
@@ -86,27 +86,27 @@ public class School extends Model {
         this.schoolLocation = location;
     }
 
-    public int getRegionId() {
+    public Integer getRegionId() {
         return regionId;
     }
 
-    public void setRegionId(int id) {
+    public void setRegionId(Integer id) {
         this.regionId = id;
     }
 
-    public int getDivisionId() {
+    public Integer getDivisionId() {
         return divisionId;
     }
 
-    public void setDivisionId(int id) {
+    public void setDivisionId(Integer id) {
         this.divisionId = id;
     }
 
-    public int getDistrictId() {
+    public Integer getDistrictId() {
         return districtId;
     }
 
-    public void setDistrictId(int id) {
+    public void setDistrictId(Integer id) {
         this.districtId = id;
     }    
 }
